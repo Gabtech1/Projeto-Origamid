@@ -17,6 +17,7 @@ ul{
 img{
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 .header{
@@ -82,7 +83,7 @@ img{
     display: grid;
     grid-template-columns: 1fr 2fr;
     max-width: 1200px;
-    padding: 40px 20px;
+    padding: 120px 20px;
     margin: 0 auto;
     gap: 100px;
 }
@@ -96,7 +97,7 @@ img{
 }
 
 .experiencia .subtitulo{
-    color: #e0e0e0;
+    color: #cccccc;
 }
 
 .experiencia-texto{
@@ -177,15 +178,28 @@ img{
 
 .formacao-container{
     max-width: 1200px;
-    padding: 40px 20px;
+    padding: 120px 20px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 100px;
+    position: relative;
+}
+
+.formacao-container::after{
+    content: "";
+    display: block;
+    width: 130px;
+    height: 100px;
+    background: url(../imgs/detalhe.svg) no-repeat center;
+    position: absolute;
+    bottom: -50px;
+    left: 20px;
 }
 
 .formacao .subtitulo{
     color: #000000;
+    max-width: 5ch;
 }
 
 .formacao-texto{
@@ -275,4 +289,57 @@ img{
 
 .idiomas h3::before{
     background: url(../imgs/idiomasSVG.svg) no-repeat center center;
+}
+
+.formacao-extra li{
+    font-size: 1.125rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.formacao-extra span{
+    color: #8f8f8f;
+}
+
+.cursos li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer{
+    background: #000000;
+}
+
+.footer-container{
+    max-width: 1200px;
+    padding: 120px 20px 60px 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+.footer-texto{
+    font-size: 1.5rem;
+    line-height: 1.33;
+    color: #cccccc;
+}
+
+.footer-contato li{
+    font-weight: bold;
+    font-size: 2.25rem;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.footer-contato li a{
+    color: #ffffff;
+}
+
+.footer-copy{
+    font-size: 1.125rem;
+    color: #8f8f8f;
+    grid-column: 1/-1;
 }
